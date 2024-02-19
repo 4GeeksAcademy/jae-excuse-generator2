@@ -16,21 +16,19 @@ let generateExcuse = () => {
   let posession = ["homework", "toe", "car", "shoe"];
   let where = ["on the street", "in my house", "in my driveway"];
 
-  let proIndx = Math.floor(Math.random() * pronoun.length);
-  let subjIndx = Math.floor(Math.random() * subject.length);
-  let actionIndx = Math.floor(Math.random() * action.length);
-  let posessionIndx = Math.floor(Math.random() * posession.length);
-  let whereIndx = Math.floor(Math.random() * where.length);
+  function random(Indx) {
+    return Math.floor(Math.random() * Indx.length);
+  }
 
   return (
-    pronoun[proIndx] +
+    pronoun[random(pronoun)] +
     " " +
-    subject[subjIndx] +
+    subject[random(subject)] +
     " " +
-    action[actionIndx] +
+    action[random(action)] +
     " " +
-    posession[posessionIndx] +
+    posession[random(posession)] +
     " " +
-    where[whereIndx]
+    where[random(where)]
   );
 };
